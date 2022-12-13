@@ -14,6 +14,6 @@ class BookingResource < Avo::BaseResource
     '3 hours' => 3,
   }
   field :room, as: :belongs_to
-  field :user, as: :belongs_to
+  field :user, as: :belongs_to, default: -> { Avo::App.context[:current_user]}
   # add fields here
 end

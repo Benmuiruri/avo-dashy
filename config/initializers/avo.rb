@@ -13,6 +13,9 @@ Avo.configure do |config|
   ## == Set the context ==
   config.set_context do
     # Return a context object that gets evaluated in Avo::ApplicationController
+    {
+      current_user: current_user,
+    }
   end
 
   ## == Authentication ==
