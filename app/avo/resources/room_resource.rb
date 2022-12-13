@@ -13,6 +13,7 @@ class RoomResource < Avo::BaseResource
   field :description, as: :textarea
   field :photo, as: :file, is_image: true
   field :location, as: :belongs_to
+  field :bookings, as: :has_many, scope: -> { query.where('booked_at > ?', Time.now) }, name: 'Upcoming Bookings'
   # add fields here
 
   grid do
