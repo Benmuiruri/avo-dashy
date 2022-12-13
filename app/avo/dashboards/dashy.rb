@@ -11,4 +11,5 @@ class Dashy < Avo::Dashboards::BaseDashboard
   # card UsersCount
   card BookingsCount
   card BookedHours
+  card BookingsOverTime
 end
