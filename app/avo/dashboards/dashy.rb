@@ -10,4 +10,5 @@ class Dashy < Avo::Dashboards::BaseDashboard
   # cards go here
   # card UsersCount
   card BookingsCount
+  card BookedHours
 end
