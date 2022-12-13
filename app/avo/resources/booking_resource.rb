@@ -16,4 +16,6 @@ class BookingResource < Avo::BaseResource
   field :room, as: :belongs_to
   field :user, as: :belongs_to, default: -> { Avo::App.context[:current_user]}
   # add fields here
+
+  filter FutureBookings
 end
