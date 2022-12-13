@@ -1,5 +1,5 @@
 class LocationResource < Avo::BaseResource
-  self.title = :id
+  self.title = :name
   self.includes = []
   # self.search_query = -> do
   #   scope.ransack(id_eq: params[:q], m: "or").result(distinct: false)
@@ -9,5 +9,7 @@ class LocationResource < Avo::BaseResource
   # Fields generated from the model
   field :name, as: :text
   field :description, as: :textarea
+  field :photo, as: :file, is_image: true
+  field :rooms, as: :has_many
   # add fields here
 end
