@@ -9,8 +9,8 @@ class LocationResource < Avo::BaseResource
   field :id, as: :id
   # Fields generated from the model
   field :name, as: :text
-  field :description, as: :textarea
-  field :photo, as: :file, is_image: true
+  field :description, as: :textarea, as_description: true
+  field :photo, as: :file, is_image: true, as_avatar: true
   field :rooms, as: :has_many
   # add fields here
 
