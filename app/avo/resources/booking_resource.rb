@@ -18,4 +18,5 @@ class BookingResource < Avo::BaseResource
   # add fields here
 
   filter FutureBookings
+  action DelayBooking
 end
